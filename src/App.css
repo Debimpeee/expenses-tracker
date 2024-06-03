@@ -6,26 +6,28 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dedede;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-/*   max-height: 100vh;
-  min-height: 600px; */
+  width: 90%;
   max-width: 400px;
   border-radius: 1rem;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
   background-color: #ffffff;
   padding: 32px;
+  margin: 20px 0; /* Added margin to prevent cutting off */
 }
 
 h1 {
@@ -41,16 +43,17 @@ h4 {
   margin: 0;
 }
 
-.balance{
+.balance {
   background-color: rgb(0, 0, 48);
   box-shadow: var(--box-shadow);
   padding: 16px;
   color: #fff;
   border-radius: 3px;
+  margin-bottom: 20px; /* Added margin-bottom */
 }
 
 .balance h4,
-.balance h1{
+.balance h1 {
   padding: 0 8px;
 }
 
@@ -66,7 +69,7 @@ h4 {
   text-align: center;
 }
 
-.money-in{
+.money-in {
   background-color: #abdbe3;
   box-shadow: var(--box-shadow);
   padding: 5px 0;
@@ -74,7 +77,7 @@ h4 {
   border-radius: 5px;
 }
 
-.money-out{
+.money-out {
   background-color: #eab676;
   box-shadow: var(--box-shadow);
   padding: 5px 0;
@@ -162,9 +165,50 @@ input[type='number'] {
   opacity: 1;
 }
 
-
-/* @media screen and (max-width: 375px) {
-  .container {
-    width: 300px;
+@media (max-width: 600px) {
+  .main {
+    padding: 16px;
   }
-} */
+
+  .balance,
+  .inc-exp-container > div,
+  .money-in,
+  .money-out,
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .money {
+    font-size: 16px;
+  }
+
+  .delete-btn {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    padding: 12px;
+  }
+
+  .balance,
+  .inc-exp-container > div,
+  .money-in,
+  .money-out,
+  .btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .money {
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
